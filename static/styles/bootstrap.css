@@ -1164,6 +1164,7 @@ body {
 	line-height: 1.42857143;
 	color: #c8c8c8;
 	background-color: #272b30;
+	margin: 0;
 }
 
 input,
@@ -1392,8 +1393,10 @@ p {
 }
 
 .lead {
+	text-align: center;
+	letter-spacing: 13px;
 	margin-bottom: 20px;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 300;
 	line-height: 1.4;
 }
@@ -5738,29 +5741,18 @@ a.badge:focus {
 
 .jumbotron {
 	padding: 30px 15px;
-	margin-bottom: 30px;
-	color: inherit;
-	background-color: #1c1e22;
 }
 
 .jumbotron h1,
 .jumbotron .h1 {
-	color: inherit;
+	letter-spacing: 40px;
+	text-align: center;
+	color: radial-gradient(#4a90e2 0.0,#9b9b9b 100.0%);
 }
 
 .jumbotron p {
-	margin-bottom: 15px;
 	font-size: 21px;
 	font-weight: 200;
-}
-
-.jumbotron>hr {
-	border-top-color: #050506;
-}
-
-.container .jumbotron,
-.container-fluid .jumbotron {
-	border-radius: 6px;
 }
 
 .jumbotron .container {
@@ -5780,7 +5772,7 @@ a.badge:focus {
 
 	.jumbotron h1,
 	.jumbotron .h1 {
-		font-size: 63px;
+		font-size: 75px;
 	}
 }
 
@@ -8303,10 +8295,6 @@ a.list-group-item-danger.active {
 a.list-group-item-danger.active:hover,
 a.list-group-item-danger.active:focus {
 	background-color: #ec4844;
-}
-
-.jumbotron {
-	border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .panel-primary .panel-heading,
