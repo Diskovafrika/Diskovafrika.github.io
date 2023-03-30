@@ -1,1 +1,198 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title> Discovafrika </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/bootstrap.css">
+    <link href="../static/styles/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163610532-1');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://localhost:5000/">Home</a></li>
+            <li><a href="http://localhost:5000/about">About</a></li>
+            <li><a href="http://localhost:5000/documentation">Documentation</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container-fluid" style="margin-top: 60px;">
+      <div class="row center yellow">
+        <div class="jumbotron">
+            <h1>DISKOVAFRIKA</h1>
+            <p class="lead">The Afrikan Dataset API</p>
+            <p class="lead"><a href="http://localhost:5000/about"></a></p>
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-6 center">
+          <p>All African Data you've ever wanted:</p>
+          <p><b>Cities, Culture, Dishes, Languages, Movies and so much more ...</b></p>
+          <p>From all <b>54</b> Afrikan Countries</p>
+          <p></p><h4>Afrika @ your fingertips!</h4><p></p>
+        </div>
+        <div class="col-lg-3">
+        </div>
+
+      </div>
+<div class="row">
+          <hr>
+    <div class="col-sm-2 col-lg-2 col-md-2">
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-8">
+      <h1 class="center">
+            Try it now!
+        </h1>
+        <div class="input-group">
+              <span class="input-group-addon">https://diskovafrika.com/api/</span>
+              <input id="interactive" type="text" class="form-control" placeholder="countries/1/">
+              <span class="input-group-btn"><button onclick="interactive_call();return false;" class="btn btn-primary">request</button></span>
+            </div>
+        <small>Need a hint? try <a href="http://localhost:5000/" onclick="update(&#39;countries/1/&#39;);return false;"><i>countries/1/</i></a> or <a href="http://localhost:5000#" onclick="update(&#39;states/3/&#39;);return false;"><i>states/3/</i></a></small>
+        <p class="lead pad_top">Result:</p>
+        <div class="well">
+          <pre id="interactive_output" class="pre-scrollable">{
+    {
+        "id": 1,
+        "name": "algeria",
+        "capital": "Algiers",
+        "iso_code": "DZ",
+        "country_code": 213,
+        "time_zone": +1,
+        "independent": true,
+        "date_of_independent": "7/5/1962"
+    },
+    {
+        "id": 2,
+        "name": "Angola",
+        "capital": "Luanda",
+        "iso_code": "AO",
+        "country_code": 244,
+        "time_zone": +1,
+        "independent": true,
+        "date_of_independent": "11/11/1975"
+    },
+    {
+        "id": 3,
+        "name": "Benin",
+        "capital": "Porto-Novo",
+        "iso_code": "BJ",
+        "country_code": 229,
+        "time_zone": +1,
+        "independent": true,
+        "date_of_independent": "8/1/1960"
+    },
+    {
+        "id": 4,
+        "name": "Botswana",
+        "capital": "Gaborone",
+        "iso_code": "BW",
+        "country_code": 267,
+        "time_zone": +2,
+        "independent": true,
+        "date_of_independent": "9/30/1966"
+    },
+    {
+        "id": 5,
+        "name": "Burkina Faso",
+        "capital": "Ouagadougou",
+        "iso_code": "BF",
+        "country_code": 226,
+        "time_zone": 0,
+        "independent": true,
+        "date_of_independent": "8/5/1960"
+    },
+}
+</pre>
+        </div>
+    </div>
+    <div class="col-sm-2 col-lg-2 col-md-2">
+    </div>
+</div>
+<div class="row pad_bot">
+        <div class="col-sm-1 col-lg-1 col-md-1">
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3">
+          <h4 class="center">What is this?</h4>
+          <p>The Star Wars API, or "swapi" (Swah-pee) is the world's first quantified and programmatically-accessible data source for all the data from the Star Wars canon universe!</p>
+          <p>We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
+        </div>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+          <h4 class="center">How can I use it?</h4>
+          <p>All the data is accessible through our HTTP web API. Consult our <a href="https://swapi.dev/documentation">documentation</a> if you'd like to get started.</p>
+          <p>Helper libraries for popular programming languages are also provided so you can consume swapi in your favourite programming language, in a style that suits you.</p>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3">
+          <h4 class="center">What happened with old swapi.co?</h4>
+          <p>swapi.co is not supported and maintained anymore. But since so many projects and tutorials used it as their educational
+          playground, this is an "unofficial" branch.</p>
+        <p>This project is open source and you can contribute <a href="https://github.com/Juriy/swapi">on GitHub</a>.</p>
+        </div>
+        <div class="col-sm-1 col-lg-1 col-md-1">
+        </div>
+      </div>
+      <hr>
+
+    
+<script>
+    function update(call){
+        jQuery('#interactive').val(call);
+        interactive_call();
+    }
+
+    function interactive_call(){
+        var content = jQuery('#interactive').val()
+        if(content == ''){
+            content = 'countries/1/';
+        }
+        var call_url = 'api/' + content;
+        jQuery.ajax({
+      dataType: 'json',
+      url: call_url,
+      context: document.body
+    }).complete(function(data) {
+        if(data['status'] == 200){
+            var d = jQuery.parseJSON(data['responseText']);
+            jQuery('#interactive_output').text(JSON.stringify(d, null, '\t'));
+        }
+        else if (data['status'] == 404) {
+            jQuery('#interactive_output').text(data['status'] + ' ' + data['statusText']);
+        }
+    });
+    }
+    </script>
+
+  <div class="row">
+        <div class="col-lg-12 footer">
+          Created by Trefania, Donald and Emmanuel 
+          ©<script type="text/javascript">document.write(new Date().getFullYear());</script> 
+          <span class="pull-right">
+            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 82px; height: 20px;" title="Twitter Follow Button" src="./SWAPI - The Star Wars API_files/follow_button.2b2d73daf636805223fb11d48f3e94f7.en.html" data-screen-name="juriy"></iframe>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <iframe src="./SWAPI - The Star Wars API_files/github-btn.html" allowtransparency="false" frameborder="0" scrolling="0" width="132" height="20"></iframe></span><p></p>
+          </div>
+      </div>
+  
+
+</html>
