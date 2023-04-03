@@ -1,24 +1,8 @@
-.center {
-	text-align: center;
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
-
-.yellow {
-	color: radial-gradient(#4a90e2 0.0,#9b9b9b 100.0%);
-}
-
-.pad_top {
-	padding-top: 34px;
-}
-
-.pad_bot {
-	padding-bottom: 34px;
-}
-
-.subscribe_btn {
-	margin-left: -100px !;
-}
-
-* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
@@ -35,17 +19,17 @@
 /* The dots/bullets/indicators */
 .dot {
   cursor: all-scroll;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #fff9f9;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.4s ease;
 }
 
 .active {
-  background-color: #717171;
+  background-color: #5fee12;
 }
 
 /* Fading animation */
@@ -60,10 +44,27 @@
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 240px) {
   .text {font-size: 11px}
 }
-.row_pad_bot{
-  padding: 10px;
-  right: 50%;
+.col-sm-3{
+  display: flex;
+  left: 20%;
+  height: 30%;
+  width: 60%;
+  
+}
+.lead-pad_top{
+  padding-right: 90%;
+  padding-top: 5%;
+}
+.col-lg-6 center{
+  margin-top: 30%;
+}
+.center{
+  text-align: center;
+}
+.col-lg-12-footer{
+  width: auto;
+  height: 30px;
 }
