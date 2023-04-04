@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="static/styles/bootstrap.css">
   <link href="static/styles/custom.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="static/js/route.js"></script>
 </head>
 
 <body>
@@ -231,7 +232,7 @@
         if (content == '') {
           content = 'countries/1/';
         }
-        var call_url = 'api/' + content;
+        var call_url = 'api/v1/' + content;
         jQuery.ajax({
           dataType: 'json',
           url: call_url,
