@@ -120,7 +120,8 @@ select {
 button,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"] {-webkit-appearance: button;
+input[type="submit"] {
+	-webkit-appearance: button;
 	cursor: pointer;
 }
 
@@ -196,7 +197,7 @@ input[type="search"]::-webkit-search-decoration {
 		content: "";
 	}
 
-	
+
 
 	thead {
 		display: table-header-group;
@@ -222,6 +223,7 @@ input[type="search"]::-webkit-search-decoration {
 	h3 {
 		page-break-after: avoid;
 	}
+
 	.navbar {
 		display: none;
 	}
@@ -4482,9 +4484,9 @@ a.badge:focus {
 
 .jumbotron h1,
 .jumbotron .h1 {
-	letter-spacing: 40px;
+	letter-spacing: 10px;
 	text-align: center;
-	color: radial-gradient(#4a90e2 0.0,#9b9b9b 100.0%);
+	color: radial-gradient(#4a90e2 0.0, #9b9b9b 100.0%);
 }
 
 .jumbotron p {
@@ -4509,7 +4511,7 @@ a.badge:focus {
 
 	.jumbotron h1,
 	.jumbotron .h1 {
-		font-size: 75px;
+		font-size: 45px;
 	}
 }
 
