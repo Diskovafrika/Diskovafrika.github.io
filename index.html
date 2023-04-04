@@ -7,15 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="static/styles/bootstrap.css">
   <link href="static/styles/custom.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-default" role="navigation">
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="documentation.html">Documentation</a></li>
       </ul>
@@ -143,68 +145,139 @@
         <h1 class="center">Try it now!</h1>
         <div class="input-group">
           <span class="input-group-addon">https://diskovafrika.com/api/</span>
-          <input id="interactive" type="text" class="form-control" placeholder="countries/1/">
+          <input id="interactive" type="text" class="form-control" placeholder="country/nig">
           <span class="input-group-btn"><button onclick="interactive_call();return false;"
               class="btn btn-primary">request</button></span>
         </div>
-        <small>Need a hint? try <a href=""
-            onclick="update(&#39;countries/1/&#39;);return false;"><i>countries/1/</i></a> or <a
-            href="https://diskovafrika.github.io#"
-            onclick="update(&#39;states/3/&#39;);return false;"><i>states/3/</i></a></small>
+        <small>Need a hint? try
+          <a href="#" onclick="update('country/');return false;"><i>country/</i></a>
+          or
+          <a href="#"
+            onclick="update('country/administrative-division/all');return false;"><i>country/administrative-division/all</i></a>
+          or
+          <a href="#"
+            onclick="update('administrative-divisions/');return false;"><i>administrative-divisions/</i></a></small>
         <p class="lead-pad_top">Result:</p>
         <div id="well">
-          <pre id="interactive_output" class="pre-scrollable">{
-            {
-                "id": 1,
-                "name": "algeria",
-                "capital": "Algiers",
-                "iso_code": "DZ",
-                "country_code": 213,
-                "time_zone": +1,
-                "independent": true,
-                "date_of_independent": "7/5/1962"
-            },
-            {
-                "id": 2,
-                "name": "Angola",
-                "capital": "Luanda",
-                "iso_code": "AO",
-                "country_code": 244,
-                "time_zone": +1,
-                "independent": true,
-                "date_of_independent": "11/11/1975"
-            },
-            {
-                "id": 3,
-                "name": "Benin",
-                "capital": "Porto-Novo",
-                "iso_code": "BJ",
-                "country_code": 229,
-                "time_zone": +1,
-                "independent": true,
-                "date_of_independent": "8/1/1960"
-            },
-            {
-                "id": 4,
-                "name": "Botswana",
-                "capital": "Gaborone",
-                "iso_code": "BW",
-                "country_code": 267,
-                "time_zone": +2,
-                "independent": true,
-                "date_of_independent": "9/30/1966"
-            },
-            {
-                "id": 5,
-                "name": "Burkina Faso",
-                "capital": "Ouagadougou",
-                "iso_code": "BF",
-                "country_code": 226,
-                "time_zone": 0,
-                "independent": true,
-                "date_of_independent": "8/5/1960"
-            },
-          }
+          <pre id="interactive_output" class="pre-scrollable">[
+    {
+        "admin_division": "8",
+        "capital": "Algiers",
+        "country_code": "213",
+        "date_of_independence": "1962-07-05",
+        "id": "db69f4b9-b73d-4d1b-b319-a5fdb9990864",
+        "iso_code": "dz",
+        "name": "Algeria",
+        "num_admin_division": 48,
+        "population": 43851044,
+        "sub_region": "Northern",
+        "utc_zone": "1"
+    },
+    {
+        "admin_division": "8",
+        "capital": "Luanda",
+        "country_code": "244",
+        "date_of_independence": "1975-11-11",
+        "id": "2973889a-4852-4882-ac59-eb83c0b1c4b4",
+        "iso_code": "ao",
+        "name": "Angola",
+        "num_admin_division": 18,
+        "population": 32866272,
+        "sub_region": "Central",
+        "utc_zone": "1"
+    },
+    {
+        "admin_division": "2",
+        "capital": "Cotonou",
+        "country_code": "229",
+        "date_of_independence": "1960-08-01",
+        "id": "7a6432b5-c4c4-48ed-8cd4-5c67d67e02b2",
+        "iso_code": "bj",
+        "name": "Benin",
+        "num_admin_division": 12,
+        "population": 12123200,
+        "sub_region": "Western",
+        "utc_zone": "1"
+    },
+    {
+        "admin_division": "3",
+        "capital": "Gaborone",
+        "country_code": "267",
+        "date_of_independence": "1966-09-30",
+        "id": "bc1e3590-da30-45d3-b051-28b2291d530b",
+        "iso_code": "bw",
+        "name": "Botswana",
+        "num_admin_division": 10,
+        "population": 2351627,
+        "sub_region": "Southern",
+        "utc_zone": "2"
+    },
+    {
+        "admin_division": "9",
+        "capital": "Ouagadougou",
+        "country_code": "226",
+        "date_of_independence": "1960-08-05",
+        "id": "a284b15b-34b9-4973-b115-0ea3bd0908de",
+        "iso_code": "bf",
+        "name": "Burkina Faso",
+        "num_admin_division": 13,
+        "population": 20903273,
+        "sub_region": "Western",
+        "utc_zone": "0"
+    },
+    {
+        "admin_division": "8",
+        "capital": "Bujumbura",
+        "country_code": "257",
+        "date_of_independence": "1962-07-01",
+        "id": "6c95a3dd-9730-48dd-a274-561bee8d0b13",
+        "iso_code": "bi",
+        "name": "Burundi",
+        "num_admin_division": 18,
+        "population": 11890784,
+        "sub_region": "Eastern",
+        "utc_zone": "2"
+    },
+    {
+        "admin_division": "9",
+        "capital": "Yaoundé",
+        "country_code": "237",
+        "date_of_independence": "1960-01-01",
+        "id": "875da6ad-6362-4719-a1da-556e07eb467c",
+        "iso_code": "cmr",
+        "name": "Cameroon",
+        "num_admin_division": 10,
+        "population": 26545863,
+        "sub_region": "Central",
+        "utc_zone": "1"
+    },
+    {
+        "admin_division": "5",
+        "capital": "Praia",
+        "country_code": "238",
+        "date_of_independence": "1975-07-05",
+        "id": "20a3ad7e-97b6-4737-8366-cdbb17045a8f",
+        "iso_code": "cv",
+        "name": "Cape Verde",
+        "num_admin_division": 22,
+        "population": 555987,
+        "sub_region": "Western",
+        "utc_zone": "-1"
+    },
+    {
+        "admin_division": "7",
+        "capital": "Bangui",
+        "country_code": "236",
+        "date_of_independence": "1960-08-13",
+        "id": "e21c9b09-5ad2-41cb-8646-ab3f7ec6d6fb",
+        "iso_code": "caf",
+        "name": "Central African Republic",
+        "num_admin_division": 16,
+        "population": 4829767,
+        "sub_region": "Central",
+        "utc_zone": "1"
+    },
+]
           </pre>
         </div>
         <script src="static/js/route.js"></script>

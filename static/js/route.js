@@ -1,22 +1,24 @@
-function update(call) {
-    jQuery('#interactive').val(call);
-    interactive_call();
+function update (call) {
+  jQuery('#interactive').val(call);
+  interactive_call();
 }
 
-function interactive_call() {
-    var content = jQuery('#interactive').val();
-    var call_url = 'http://127.0.0.1:5000/api/v1/' + content;
-    jQuery.ajax({
-        dataType: 'json',
-        url: call_url,
-        context: document.body
-    }).complete(function (data) {
-        if (data['status'] == 200) {
-            var d = jQuery.parseJSON(data['responseText']);
-            jQuery('#well').text(JSON.stringify(d, null, '\t'));
-        }
-        else if (data['status'] == 404) {
-            jQuery('#well').text(data['status'] + ' ' + data['statusText']);
-        }
-    });
+function interactive_call () {
+  let content = jQuery('#interactive').val();
+  if (content == '') {
+    content = 'country/';
+  }
+  const call_url = 'http://127.0.0.1:5000/api/v1/' + content;
+  jQuery.ajax({
+    dataType: 'json',
+    url: call_url,
+    context: document.body
+  }).complete(function (data) {
+    if (data.status == 200) {
+      const d = jQuery.parseJSON(data.responseText);
+      jQuery('#interactive_output').text(JSON.stringify(d, null, '\t'));
+    } else if (data.status == 404) {
+      jQuery('#interactive_output').text(data.status + ' ' + data.statusText);
+    }
+  });
 }
