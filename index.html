@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="static/styles/bootstrap.css">
   <link href="static/styles/custom.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="static/js/route.js"></script>
 </head>
 
 <body>
@@ -152,62 +151,63 @@
             href="https://diskovafrika.github.io#"
             onclick="update(&#39;states/3/&#39;);return false;"><i>states/3/</i></a></small>
         <p class="lead-pad_top" >Result:</p>
-        <div class="well">
+        <div id="well">
           <pre id="interactive_output" class="pre-scrollable">{
-    {
-        "id": 1,
-        "name": "algeria",
-        "capital": "Algiers",
-        "iso_code": "DZ",
-        "country_code": 213,
-        "time_zone": +1,
-        "independent": true,
-        "date_of_independent": "7/5/1962"
-    },
-    {
-        "id": 2,
-        "name": "Angola",
-        "capital": "Luanda",
-        "iso_code": "AO",
-        "country_code": 244,
-        "time_zone": +1,
-        "independent": true,
-        "date_of_independent": "11/11/1975"
-    },
-    {
-        "id": 3,
-        "name": "Benin",
-        "capital": "Porto-Novo",
-        "iso_code": "BJ",
-        "country_code": 229,
-        "time_zone": +1,
-        "independent": true,
-        "date_of_independent": "8/1/1960"
-    },
-    {
-        "id": 4,
-        "name": "Botswana",
-        "capital": "Gaborone",
-        "iso_code": "BW",
-        "country_code": 267,
-        "time_zone": +2,
-        "independent": true,
-        "date_of_independent": "9/30/1966"
-    },
-    {
-        "id": 5,
-        "name": "Burkina Faso",
-        "capital": "Ouagadougou",
-        "iso_code": "BF",
-        "country_code": 226,
-        "time_zone": 0,
-        "independent": true,
-        "date_of_independent": "8/5/1960"
-    },
-}
-</pre>
-</div>
-</div>
+            {
+                "id": 1,
+                "name": "algeria",
+                "capital": "Algiers",
+                "iso_code": "DZ",
+                "country_code": 213,
+                "time_zone": +1,
+                "independent": true,
+                "date_of_independent": "7/5/1962"
+            },
+            {
+                "id": 2,
+                "name": "Angola",
+                "capital": "Luanda",
+                "iso_code": "AO",
+                "country_code": 244,
+                "time_zone": +1,
+                "independent": true,
+                "date_of_independent": "11/11/1975"
+            },
+            {
+                "id": 3,
+                "name": "Benin",
+                "capital": "Porto-Novo",
+                "iso_code": "BJ",
+                "country_code": 229,
+                "time_zone": +1,
+                "independent": true,
+                "date_of_independent": "8/1/1960"
+            },
+            {
+                "id": 4,
+                "name": "Botswana",
+                "capital": "Gaborone",
+                "iso_code": "BW",
+                "country_code": 267,
+                "time_zone": +2,
+                "independent": true,
+                "date_of_independent": "9/30/1966"
+            },
+            {
+                "id": 5,
+                "name": "Burkina Faso",
+                "capital": "Ouagadougou",
+                "iso_code": "BF",
+                "country_code": 226,
+                "time_zone": 0,
+                "independent": true,
+                "date_of_independent": "8/5/1960"
+            },
+            }
+          </pre>
+        </div>
+        <script src="static/js/route.js"></script>
+      </div>
       
     </div>
       <div class="col-sm-3">
@@ -221,31 +221,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function update(call) {
-        jQuery('#interactive').val(call);
-        interactive_call();
-      }
-
-      function interactive_call() {
-        var content = jQuery('#interactive').val();
-        var call_url = 'api/v1/' + content;
-        jQuery.ajax({
-          dataType: 'json',
-          url: call_url,
-          context: document.body
-        }).complete(function (data) {
-          if (data['status'] == 200) {
-            var d = jQuery.parseJSON(data['responseText']);
-            jQuery('#interactive_output').text(JSON.stringify(d, null, '\t'));
-          }
-          else if (data['status'] == 404) {
-            jQuery('#interactive_output').text(data['status'] + ' ' + data['statusText']);
-          }
-        });
-      }
-    </script>
-
       <div class="col-lg-12-footer">
         Created by Trefania, Donald and Emmanuel &copy;
       </div>
