@@ -13,66 +13,80 @@
   <link href="./static/styles/custom.css" rel="stylesheet">
   <link rel="shortcut icon" href="https://diskovafrika.github.io/static/favicon.ico">
 
-  
+
 </head>
 
 <body>
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://diskovafrika.github.io/">Home</a></li>
-          <li><a href="https://diskovafrika.github.io/about">About</a></li>
-          <li><a href="https://diskovafrika.github.io/documentation">Documentation</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
   </nav>
+
   <div class="container-fluid" style="margin-top: 20px;">
-    <div class="row center yellow">
-      <div class="jumbotron">
-        <h2 style="text-align: center; letter-spacing: 13px;">DISKOVAFRIKA</h2>
-        <p class="lead">The Afrikan Dataset API</p>
-      </div>
+    <!-- <div class="row center yellow"> -->
+    <div class="jumbotron">
+      <h2 style="text-align: center; letter-spacing: 13px;">DISKOVAFRIKA</h2>
+      <p class="lead">The Afrikan Dataset API</p>
     </div>
+  </div>
 
-    
-      <div class="col-lg-8 col-md-8 col-sm-8">
 
-        <h2 style="color: white;"><strong>What is this?</strong></h2>
+  <div class="col-lg-8 col-md-8 col-sm-8">
 
-        <p>Discovafrica is an API and web service intended to provide information on several categories such as local dishes, music, historical books, languages, Religions, Politics etc all grouped by their countries and detailed information where necessary!
-        <br>We've taken all the rich contextual stuff from the universe and formatted into something easier to consume with software. Then we went and stuck an API on the front so you can access it all!</p>
+    <h2 style="color: white;"><strong>What is this?</strong></h2>
 
-        <p>We've formatted this data in <a href="https://json.org/"><strong>JSON</strong></a> and exposed it to you in a
-          <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><strong>RESTish</strong></a>
-          implementation that allows you to programmatically collect and measure the data.
-        </p>
+    <p>Discovafrica is an API and web service intended to provide information on several categories such as local
+      dishes, music, historical books, languages, Religions, Politics etc all grouped by their countries and detailed
+      information where necessary!
+      <br>We've taken all the rich contextual stuff from the universe and formatted into something easier to consume
+      with software. Then we went and stuck an API on the front so you can access it all!
+    </p>
 
-        <p><a href="https://diskovafrika.github.io/documentation">Check out the documentation to get started consuming
-            diskovafrica data.</a></p>
+    <p>We've formatted this data in <a href="https://json.org/"><strong>JSON</strong></a> and exposed it to you in a
+      <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><strong>RESTish</strong></a>
+      implementation that allows you to programmatically collect and measure the data.
+    </p>
 
-        <h2 style="color: white;">What can you use this for?</h2>
+    <p><a href="https://diskovafrika.github.io/documentation">Check out the documentation to get started consuming
+        diskovafrica data.</a></p>
 
-        <p>Getting data from <a href="https://diskovafrika.github.io"><strong>diskovafrica</strong></a> has never been easier. Here are some examples using the <a href="https://diskovafrika.github.io/documentation#python">Python helper library</a></p>
+    <h2 style="color: white;">What can you use this for?</h2>
 
-        <p><em>List the countries in order of size</em>:</p>
+    <p>Getting data from <a href="https://diskovafrika.github.io"><strong>diskovafrica</strong></a> has never been
+      easier. Here are some examples using the <a href="https://diskovafrika.github.io/documentation#python">Python
+        helper library</a></p>
 
-        <pre><code>import diskovafrica
+    <p><em>List the countries in order of size</em>:</p>
+
+    <pre><code>import diskovafrica
           for countries in diskovafrica.get_all("countries").order_by("diameter"):
           print(country.name)
         </code></pre>
 
-        <p><em>View the state which has more than one languages</em>:</p>
-        <pre><code>import diskovafrica
+    <p><em>View the state which has more than one languages</em>:</p>
+    <pre><code>import diskovafrica
           for state in countries.get_all("state").iter():
           if len(state.languages) &gt; 2:
           print(state.name)
         </code></pre>
 
-        <p><em>Discover if all ingredients are in the recipe</em>:</p>
+    <p><em>Discover if all ingredients are in the recipe</em>:</p>
 
-        <pre><code>import diskovafrica
+    <pre><code>import diskovafrica
           a = diskovafrica.get_dish(4)
           rice = diskovafrica.get_recipes(36)
           for b in a.get_ingredients().iter():
@@ -80,30 +94,31 @@
           print("Good dish!")
         </code></pre>
 
-        <h2>Contributors</h2>
+    <h2>Contributors</h2>
 
-        <p>DISKOVAFRIKA would not be possible without contributions from these amazing friends:</p>
+    <p>DISKOVAFRIKA would not be possible without contributions from these amazing friends:</p>
 
-        <ul>
-          <li><a href="https://github.com/Trefania">Trefania Vhareta</a></li>
-          <li><a href="https://github.com/fashemma007">Emmanuel Fasogba</a></li>
-          <li><a href="https://github.com/Certifieddonnie">Mc Donald Amure</a></li>
-        </ul>
+    <ul>
+      <li><a href="https://github.com/Trefania">Trefania Vhareta</a></li>
+      <li><a href="https://github.com/fashemma007">Emmanuel Fasogba</a></li>
+      <li><a href="https://github.com/Certifieddonnie">Mc Donald Amure</a></li>
+    </ul>
 
-      </div>
-      <div class="col-sm-2 col-lg-2 col-md-2">
-      </div>
+  </div>
+  <div class="col-sm-2 col-lg-2 col-md-2">
+  </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-lg-12 footer">
+      Created by Trefania, Donald and Emmanuel
+      ©
+
+      <p></p>
     </div>
-
-
-
-    <div class="row">
-      <div class="col-lg-12 footer">
-        Created by Trefania, Donald and Emmanuel
-        ©
-        
-        <p></p>
-      </div>
-    </div>
+  </div>
 </body>
+
 </html>
