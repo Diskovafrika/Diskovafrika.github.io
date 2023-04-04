@@ -229,9 +229,6 @@
 
       function interactive_call() {
         var content = jQuery('#interactive').val();
-        if (content == '') {
-          content = 'countries/1/';
-        }
         var call_url = 'api/v1/' + content;
         jQuery.ajax({
           dataType: 'json',
