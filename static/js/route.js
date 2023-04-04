@@ -5,9 +5,6 @@ function update(call) {
 
 function interactive_call() {
     var content = jQuery('#interactive').val();
-    if (content == '') {
-        content = 'country/1/';
-    }
     var call_url = 'http://127.0.0.1:5000/api/v1/' + content;
     jQuery.ajax({
         dataType: 'json',
