@@ -8,7 +8,7 @@ function interactive_call() {
     if (content == '') {
         content = 'country/1/';
     }
-    var call_url = 'api/v1/' + content;
+    var call_url = 'http://127.0.0.1:5000/api/v1/' + content;
     jQuery.ajax({
         dataType: 'json',
         url: call_url,
