@@ -317,8 +317,8 @@ Content-Type: application/json
                     This allows you to make queries like:</p>
 
                 <p><code>
-https://DiskovAfrika.dev/api/people/?search=r2
-</code></p>
+                    https://diskovafrika.com/api/v1/country?search=angola
+                </code></p>
 
                 <p>All searches will use case-insensitive partial matches on the set of search fields. To see the set of
                     search fields for each resource, check out the individual resource documentation. For more
@@ -329,26 +329,13 @@ https://DiskovAfrika.dev/api/people/?search=r2
 
                 <hr>
 
-                <p>DiskovAfrika provides two encodings for you to render the data with:</p>
+                <p>DiskovAfrika provides one encoding for you to render the data with:</p>
 
                 <p><a name="json"></a></p>
 
                 <h3>JSON</h3>
 
                 <p>JSON is the standard data format provided by DiskovAfrika by default.</p>
-
-                <p><a name="wookiee"></a></p>
-
-                <h3>Wookiee</h3>
-
-                <p>Wookiee is for our tall hairy allies who speak Wookiee, this encoding is identical to JSON except
-                    with wookiee translations.</p>
-
-                <p>Using the wookiee renderer is easy, just append <code>?format=wookiee</code> to your urls:</p>
-
-                <p><code>
-https://DiskovAfrika.dev/api/planets/1/?format=wookiee
-</code></p>
 
                 <h1>Resources</h1>
 
@@ -362,20 +349,19 @@ https://DiskovAfrika.dev/api/planets/1/?format=wookiee
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/
-</code></pre>
+                <pre><code>http https://diskovafrika.com/api/v1</code></pre>
 
                 <p><strong>Example response:</strong></p>
 
                 <pre><code>HTTP/1.0 200 OK
 Content-Type: application/json
 {
-    "films": "https://DiskovAfrika.dev/api/films/",
-    "people": "https://DiskovAfrika.dev/api/people/",
-    "planets": "https://DiskovAfrika.dev/api/planets/",
-    "species": "https://DiskovAfrika.dev/api/species/",
-    "starships": "https://DiskovAfrika.dev/api/starships/",
-    "vehicles": "https://DiskovAfrika.dev/api/vehicles/"
+    "country": "https://diskovafrika.com/api/v1/country/",
+    "user": "https://diskovafrika.com/api/v1/user/",
+    "planets": "https://diskovafrika.com/api/v1/planets/",
+    "species": "https://diskovafrika.com/api/v1/species/",
+    "starships": "https://diskovafrika.com/api/v1/starships/",
+    "vehicles": "https://diskovafrika.com/api/v1/vehicles/"
 }
 </code></pre>
 
@@ -414,7 +400,7 @@ Content-Type: application/json
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/people/1/
+                <pre><code>http https://diskovafrika.com/api/v1/people/1/
 </code></pre>
 
                 <p><strong>Example response:</strong></p>
@@ -425,28 +411,28 @@ Content-Type: application/json
     "birth_year": "19 BBY",
     "eye_color": "Blue",
     "films": [
-        "https://DiskovAfrika.dev/api/films/1/",
+        "https://diskovafrika.com/api/v1/films/1/",
         ...
     ],
     "gender": "Male",
     "hair_color": "Blond",
     "height": "172",
-    "homeworld": "https://DiskovAfrika.dev/api/planets/1/",
+    "homeworld": "https://diskovafrika.com/api/v1/planets/1/",
     "mass": "77",
     "name": "Luke Skywalker",
     "skin_color": "Fair",
     "created": "2014-12-09T13:50:51.644000Z",
     "edited": "2014-12-10T13:52:43.172000Z",
     "species": [
-        "https://DiskovAfrika.dev/api/species/1/"
+        "https://diskovafrika.com/api/v1/species/1/"
     ],
     "starships": [
-        "https://DiskovAfrika.dev/api/starships/12/",
+        "https://diskovafrika.com/api/v1/starships/12/",
         ...
     ],
-    "url": "https://DiskovAfrika.dev/api/people/1/",
+    "url": "https://diskovafrika.com/api/v1/people/1/",
     "vehicles": [
-        "https://DiskovAfrika.dev/api/vehicles/14/"
+        "https://diskovafrika.com/api/v1/vehicles/14/"
         ...
     ]
 }
@@ -518,7 +504,7 @@ Content-Type: application/json
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/films/1/
+                <pre><code>http https://diskovafrika.com/api/v1/films/1/
 </code></pre>
 
                 <p><strong>Example response:</strong></p>
@@ -527,7 +513,7 @@ Content-Type: application/json
 Content-Type: application/json
 {
     "characters": [
-        "https://DiskovAfrika.dev/api/people/1/",
+        "https://diskovafrika.com/api/v1/people/1/",
         ...
     ],
     "created": "2014-12-10T14:23:31.880000Z",
@@ -536,23 +522,23 @@ Content-Type: application/json
     "episode_id": 4,
     "opening_crawl": "It is a period of civil war.\n\nRebel spaceships, striking\n\nfrom a hidden base, have won\n\ntheir first victory against\n\nthe evil Galactic Empire.\n\n\n\nDuring the battle, Rebel\n\nspies managed to steal secret\r\nplans to the Empire's\n\nultimate weapon, the DEATH\n\nSTAR, an armored space\n\nstation with enough power\n\nto destroy an entire planet.\n\n\n\nPursued by the Empire's\n\nsinister agents, Princess\n\nLeia races home aboard her\n\nstarship, custodian of the\n\nstolen plans that can save her\n\npeople and restore\n\nfreedom to the galaxy....",
     "planets": [
-        "https://DiskovAfrika.dev/api/planets/1/",
+        "https://diskovafrika.com/api/v1/planets/1/",
         ...
     ],
     "producer": "Gary Kurtz, Rick McCallum",
     "release_date": "1977-05-25",
     "species": [
-        "https://DiskovAfrika.dev/api/species/1/",
+        "https://diskovafrika.com/api/v1/species/1/",
         ...
     ],
     "starships": [
-        "https://DiskovAfrika.dev/api/starships/2/",
+        "https://diskovafrika.com/api/v1/starships/2/",
         ...
     ],
     "title": "A New Hope",
-    "url": "https://DiskovAfrika.dev/api/films/1/",
+    "url": "https://diskovafrika.com/api/v1/films/1/",
     "vehicles": [
-        "https://DiskovAfrika.dev/api/vehicles/4/",
+        "https://diskovafrika.com/api/v1/vehicles/4/",
         ...
     ]
 }
@@ -615,7 +601,7 @@ Content-Type: application/json
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/starships/9/
+                <pre><code>http https://diskovafrika.com/api/v1/starships/9/
 </code></pre>
 
                 <p><strong>Example response:</strong></p>
@@ -638,11 +624,11 @@ Content-Type: application/json
     "name": "Death Star",
     "passengers": "843342",
     "films": [
-        "https://DiskovAfrika.dev/api/films/1/"
+        "https://diskovafrika.com/api/v1/films/1/"
     ],
     "pilots": [],
     "starship_class": "Deep Space Mobile Battlestation",
-    "url": "https://DiskovAfrika.dev/api/starships/9/"
+    "url": "https://diskovafrika.com/api/v1/starships/9/"
 }
 </code></pre>
 
@@ -719,7 +705,7 @@ Content-Type: application/json
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/vehicles/4/
+                <pre><code>http https://diskovafrika.com/api/v1/vehicles/4/
 </code></pre>
 
                 <p><strong>Example response:</strong></p>
@@ -742,9 +728,9 @@ Content-Type: application/json
     "passengers": "30",
     "pilots": [],
     "films": [
-        "https://DiskovAfrika.dev/api/films/1/"
+        "https://diskovafrika.com/api/v1/films/1/"
     ],
-    "url": "https://DiskovAfrika.dev/api/vehicles/4/",
+    "url": "https://diskovafrika.com/api/v1/vehicles/4/",
     "vehicle_class": "wheeled"
 }
 </code></pre>
@@ -812,7 +798,7 @@ Content-Type: application/json
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/species/3/
+                <pre><code>http https://diskovafrika.com/api/v1/species/3/
 </code></pre>
 
                 <p><strong>Example response:</strong></p>
@@ -829,18 +815,18 @@ Content-Type: application/json
     "edited": "2014-12-10T16:44:31.486000Z",
     "eye_colors": "blue, green, yellow, brown, golden, red",
     "hair_colors": "black, brown",
-    "homeworld": "https://DiskovAfrika.dev/api/planets/14/",
+    "homeworld": "https://diskovafrika.com/api/v1/planets/14/",
     "language": "Shyriiwook",
     "name": "Wookie",
     "people": [
-        "https://DiskovAfrika.dev/api/people/13/"
+        "https://diskovafrika.com/api/v1/people/13/"
     ],
     "films": [
-        "https://DiskovAfrika.dev/api/films/1/",
-        "https://DiskovAfrika.dev/api/films/2/"
+        "https://diskovafrika.com/api/v1/films/1/",
+        "https://diskovafrika.com/api/v1/films/2/"
     ],
     "skin_colors": "gray",
-    "url": "https://DiskovAfrika.dev/api/species/3/"
+    "url": "https://diskovafrika.com/api/v1/species/3/"
 }
 </code></pre>
 
@@ -907,7 +893,7 @@ Content-Type: application/json
 
                 <p><strong>Example request:</strong></p>
 
-                <pre><code>http https://DiskovAfrika.dev/api/planets/1/
+                <pre><code>http https://diskovafrika.com/api/v1/planets/1/
 </code></pre>
 
                 <p><strong>Example response:</strong></p>
@@ -921,7 +907,7 @@ Content-Type: application/json
     "diameter": "10465",
     "edited": "2014-12-15T13:48:16.167217Z",
     "films": [
-        "https://DiskovAfrika.dev/api/films/1/",
+        "https://diskovafrika.com/api/v1/films/1/",
         ...
     ],
     "gravity": "1",
@@ -929,13 +915,13 @@ Content-Type: application/json
     "orbital_period": "304",
     "population": "120000",
     "residents": [
-        "https://DiskovAfrika.dev/api/people/1/",
+        "https://diskovafrika.com/api/v1/people/1/",
         ...
     ],
     "rotation_period": "23",
     "surface_water": "1",
     "terrain": "Dessert",
-    "url": "https://DiskovAfrika.dev/api/planets/1/"
+    "url": "https://diskovafrika.com/api/v1/planets/1/"
 }
 </code></pre>
 
