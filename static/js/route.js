@@ -8,7 +8,7 @@ function interactive_call () {
   if (content == '') {
     content = 'country/';
   }
-  const call_url = 'http://127.0.0.1:5000/api/v1/' + content;
+  const call_url = 'http://api.diskovafrika.live/api/v1/' + content;
   jQuery.ajax({
     dataType: 'json',
     url: call_url,
